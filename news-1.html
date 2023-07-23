@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>最新消息內頁</title>
+</head>
+<style>
+    .body {
+
+        margin: auto;
+    }
+
+    .wrap {
+        display: flex;
+    }
+
+
+    /* close關閉鈕 */
+    .btn {
+        width: 50px;
+        height: 50px;
+        background-color: #000;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        border-radius: 50%;
+        margin: 10%;
+    }
+
+    .btn span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        transform-origin: center;
+
+    }
+
+    .btn span:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .btn span:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .btn:hover {
+        background-color: #F2B310;
+        transition: .2s;
+    }
+
+
+    .right {
+        width: 1220px;
+        width: 300px;
+        height: 700px;
+        margin: 0px;
+        background-color: #EBEBEC;
+    }
+
+    .right .txt {
+        width: 200px;
+        margin: auto;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .icon {
+        text-align: center;
+    }
+
+    .icon P {
+        font-size: 16px;
+
+    }
+
+    .icon a {
+        padding: 10px;
+        display: inline-block;
+    }
+
+    .h3div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .h3div h3 {
+        font-size: 30px;
+        margin-left: 50px;
+        padding-top: 30px;
+    }
+
+    .item {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: nowrap;
+
+    }
+
+    .item img {
+        vertical-align: top;
+    }
+
+    .item .pic {
+        margin: 10px 0;
+    }
+
+
+    .contact {
+        width: 600px;
+        background-color: #F2B310;
+        padding: 20px 30px;
+        line-height: 50px;
+        margin: 30px 50px;
+        position: relative;
+
+    }
+</style>
+
+<body>
+
+    <div class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="imgs/logo.png" width=105 height=48></a>
+        </div>
+        <nav>
+            <a href="aboutus.html">關於我們</a>
+            <a href="news.html">最新消息</a>
+            <a href="team.html">專業團隊</a>
+            <a href="service.html">服務項目</a>
+            <a href="venus.html">場館介紹</a>
+            <a href="contact.html">聯絡我們</a>
+        </nav>
+    </div>
+
+
+    <div class="wrap">
+
+        <div class="right">
+            <div class="btn">
+                <a href="news.html">
+                    <span></span>
+                    <span></span>
+                </a>
+
+            </div>
+
+            <div class="txt">
+                o1 <br>
+                Jul 2023
+            </div>
+
+
+
+            <div class="icon">
+                <p>share</p>
+                <a href=""><img src="imgs/fb2.png" alt="fb icon" width=30 height=28></a>
+                <a href=""><img src="imgs/ig2.png" alt="ig icon" width=30 height=28></a>
+                <a href=""><img src="imgs/line 2.png" alt="line icon" width=30 height=28></a>
+            </div>
+        </div>
+
+
+        <div class="h3div">
+            <h3>2023 Be My Guest 邀請我的健身貴賓</h3>
+            <div class="item">
+
+
+                <div class="contact">
+
+                    <p>我們沒有業務單位，不會趁你來現場時強迫推銷、不讓你離開，我們秉持專業與禮貌的態度與您介紹場館，也不會在體驗時刻打擾您，請安心體驗！
+                        <br>
+
+                        (1) 不綁約、不推銷：讓大家專注健身，輕鬆運動無負擔。<br>
+
+                        (2) 頂規專業器材：精心挑選能完整訓練到各肌群的設備，達到最佳訓練。<br>
+
+                        (3) 寬敞舒適空間：500坪大空間、空調設備齊全，空氣更流通舒適不壓迫。<br>
+
+                        (4) 專業認證教練：每個教練都經過精實考核，沒有免洗教練，只有高度專業。<br>
+
+                        (5) 手機APP即可進場：採高科技門卡，只要憑手機驗證就直接進場！<br>
+
+                        (6) 合理月費：健身是大眾運動，不是貴族福利，所以合理價格讓大家都享受好場館！</p>
+                </div>
+                <div class="pic">
+                    <img src="imgs/news.jpg" alt="最新消息" width="500px" height="580px">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main-footer">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="logo圖" width=105 height=45>
+        </div>
+        <div class="tel">
+            <p>電話:03-4205643 <br>
+                時間/06:00-23:00 <br>
+                台北市信義區基隆路一段110號<br>
+                桃園市桃園區三民路三段120號
+            </p>
+        </div>
+
+        <div class="footer-icon">
+            <p>contact with us</p>
+
+            <div class="icon">
+                <img src="imgs/fb2.png" alt="fb" width=48 height=48>
+            </div>
+
+            <div class="icon">
+                <img src="imgs/ig2.png" alt="ig" width=48 height=48>
+            </div>
+            <div class="icon">
+                <img src="imgs/line 2.png" alt="line" width=48 height=48>
+            </div>
+
+            <div class="main-footer-contact">
+                <h3>立即訂閱我們</h3>
+                <div class="subscribe-container">
+                    <input type="email" id="emailInput" placeholder="輸入你的電子郵件地址">
+                    <button onclick="subscribe()">訂閱</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="gotop">
+            <img src="imgs/壺鈴.png" alt="壺鈴Top">
+        </div>
+
+
+</body>
+
+</html>

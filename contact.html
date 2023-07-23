@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>聯絡我們</title>
+</head>
+<style>
+    body {
+        margin: auto;
+    }
+
+
+    .header {
+        font-size: 36px;
+        text-align: center;
+        line-height: 150px;
+        background-color: #F2B310;
+        margin-bottom: 30px;
+    }
+
+
+    .header .txt {
+        font-size: 36px;
+    }
+
+
+    form {
+        width: 550px;
+        display: flex;
+        flex-direction: column;
+        background-color: #F2B310;
+        padding: 50px 30px;
+        margin: auto;
+        border-radius: 50px;
+        font-size: 16px;
+        position: relative;
+        z-index: 2;
+    }
+
+    form button {
+        width: 150px;
+        padding: 10px 50px;
+        margin: auto;
+        cursor: pointer;
+
+    }
+
+    form label {
+        display: flex;
+        align-items: center;
+    }
+
+    form .txt {
+        width: 150px;
+        margin: 0;
+    }
+
+    form input,
+    form select {
+        flex: 1;
+        border-radius: 4px;
+        height: 30px;
+        border: 1px solid #999;
+
+    }
+
+    .pic {
+
+        text-align: center;
+        position: relative;
+    }
+
+    .pic img {
+        width: 500px;
+        height: 200px;
+        vertical-align: top;
+        margin: 30px;
+        z-index: 1;
+
+    }
+
+    .footer-icon {
+        position: relative;
+
+    }
+
+    .footer-icon-div {
+        width: 220px;
+        /* border:3px solid red; */
+        margin: auto;
+    }
+
+    .footer-icon .pic-icon {
+        width: 250px;
+        margin: auto;
+        z-index: 1;
+    }
+
+
+    form div {
+        margin: 20px;
+    }
+
+    .formdiv {
+        position: relative;
+    }
+
+    .yellowbg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+        height: 50%;
+        z-index: -1;
+        background: #f4cd6a;
+    }
+
+    .graybg {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: -1;
+        background: #EBEBEC;
+        width: 50%;
+        height: 50%;
+    }
+
+    .graybg.h100 {
+        top: 0;
+        height: 100%;
+
+    }
+</style>
+
+<body>
+    <div class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="imgs/logo.png" width=105 height=48></a>
+        </div>
+        <nav>
+            <a href="aboutus.html">關於我們</a>
+            <a href="news.html">最新消息</a>
+            <a href="team.html">專業團隊</a>
+            <a href="service.html">服務項目</a>
+            <a href="venus.html">場館介紹</a>
+            <a href="contact.html">聯絡我們</a>
+        </nav>
+    </div>
+
+    <div class="header">
+        <div class="txt">
+            contact us
+        </div>
+
+    </div>
+
+    <div class="formdiv">
+        <form action="">
+            <div>
+                <label>
+                    <div class="txt">姓名:</div>
+                    <input type="text">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <div class="txt">連絡電話:</div>
+                    <input type="text">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <div class="txt">電子信箱:</div>
+                    <input type="email">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <div class="txt">方便聯絡時間:</div>
+                    <select>
+                        <option>請選擇方便聯絡時間:</option>
+                        <option>早上9:00-12:00</option>
+                        <option>下午13:00-15:00</option>
+                        <option>下午15:00-18:00</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <div class="txt">留下line稱呼(line id):</div>
+                    <input type="text">
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <div class="txt">預約體驗場館:</div>
+                    <select>
+                        <option>請選擇體驗場館</option>
+                        <option>台北</option>
+                        <option>桃園</option>
+
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <div class="txt">欲報名課程類型:</div>
+                    <select>
+                        <option>請選擇欲報名課程</option>
+                        <option>私人教練課程</option>
+                        <option>飲食、組合方案</option>
+
+                    </select>
+                </label>
+            </div>
+            <button type="submit">送出</button>
+        </form>
+
+        <div class="yellowbg">
+        </div>
+        <div class="graybg">
+        </div>
+    </div>
+
+
+    <div class="pic">
+        <img src="imgs/map.jpg" alt="地圖">
+        <div class="graybg h100"></div>
+    </div>
+
+
+    <!-- 主頁內icon -->
+    <div class="footer-icon">
+        <div class="footer-icon-div">
+            <p>contact with us</p>
+            <div class="pic-icon">
+                <div class="icon">
+                    <img src="imgs/fb contact.png" alt="fb" width=48 height=48>
+                </div>
+
+                <div class="icon">
+                    <img src="imgs/ig team.png" alt="ig" width=48 height=48>
+                </div>
+                <div class="icon">
+                    <img src="imgs/line contact 1.png" alt="line" width=48 height=48>
+                </div>
+            </div>
+        </div>
+        <div class="graybg h100">
+        </div>
+    </div>
+
+    <div class="main-footer">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
+        </div>
+        <div class="tel">
+            <p>電話:03-4205643 <br>
+                時間/06:00-23:00 <br>
+                台北市信義區基隆路一段110號<br>
+                桃園市桃園區三民路三段120號
+            </p>
+        </div>
+
+        <div class="footer-icon">
+            <p>contact with us</p>
+
+            <div class="icon">
+                <img src="imgs/fb2.png" alt="fb" width=48 height=48>
+            </div>
+
+            <div class="icon">
+                <img src="imgs/ig2.png" alt="ig" width=48 height=48>
+            </div>
+            <div class="icon">
+                <img src="imgs/line 2.png" alt="line" width=48 height=48>
+            </div>
+
+            <div class="main-footer-contact">
+                <h3>立即訂閱我們</h3>
+                <div class="subscribe-container">
+                    <input type="email" id="emailInput" placeholder="輸入你的電子郵件地址">
+                    <button onclick="subscribe()">訂閱</button>
+                </div>
+            </div>
+
+        </div>
+        <div id="gotop">
+            <img src="imgs/壺鈴.png" alt="壺鈴Top">
+        </div>
+        <script>
+            window.addEventListener('scroll', function () {
+                    if (window.scrollY > 100) {
+                        document.getElementById('gotop').style.display = 'block';
+                    } else {
+                        document.getElementById('gotop').style.display = 'none';
+                    }
+                }
+
+            );
+
+            document.getElementById('gotop').addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+</body>
+
+</html>

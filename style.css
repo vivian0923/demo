@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Antonio', sans-serif;
+    width: 100%;
+    min-width: 1200px;
+    margin: auto;
+}
+
+.main-header {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: black;
+
+}
+
+.main-header nav a:hover {
+    color: #F2B310;
+}
+
+
+
+.header {
+    min-width: 768px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 150px;
+    padding: 30px;
+    background-color: #F2B310;
+}
+
+
+.logo img {
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    margin: auto;
+
+}
+
+nav a {
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 5px 20px;
+
+}
+
+.main-footer {
+    width:100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+ 
+}
+
+.main-footer .logo {
+    margin-top: 50px;
+}
+
+.main-footer .tel p {
+    margin-top: 50px;
+    line-height: 1.5;
+}
+
+
+.footer-icon {
+    position: relative;
+}
+
+.footer-icon P {
+    text-align: center;
+    font-size: 16px;
+
+
+}
+
+.footer-icon .icon {
+    padding: 10px;
+    display: inline-block;
+
+}
+
+.main-footer,
+footer-icon p {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.main-footer-contact {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/* 立即訂閱我們 */
+.subscribe-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-contact h3{
+    text-align: center;
+    margin: 10px 0;
+
+}
+
+.subscribe-container input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+.subscribe-container button {
+    padding: 10px 20px;
+    background-color: #F2B310;
+    color: black;
+    font-weight: 10000;
+    border: none;
+    cursor: pointer;
+}
+
+#gotop {
+    position: fixed;
+    bottom: 250px;
+    right: 50px;
+    z-index: 6;
+    /* display: none; */
+    cursor: pointer;
+}
+
+#gotop img {
+    width: 40px;
+    height: 50px;
+}
+
+
+
+
+
+
+/* h1,h2,h2{
+    color:#333;
+} */
+
+/* p{
+    color:#666;
+} */

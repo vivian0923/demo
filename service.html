@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&family=Jockey+One&display=swap" rel="stylesheet">
+
+    <title>服務項目</title>
+    <style>
+        body {
+            margin: auto;
+
+        }
+
+        .cards {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card {
+
+            width: 1220px;
+            margin: auto;
+            margin-bottom: 50px;
+
+        }
+
+        h2 {
+
+            width: 300px;
+            margin: 30px auto;
+            margin-top: 30px;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+
+        .service {
+            width: 1200px;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+
+        }
+
+        .service .item {
+            width: 300px;
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid gray;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        .service .item h3,
+        h4 {
+            margin: 5px 0;
+        }
+
+        .service .item p {
+
+            padding: 20px 40px;
+            height: 200px;
+
+        }
+
+        .service span {
+
+            font-size: 40px;
+            font-weight: 1000;
+            display: block;
+            color: #413d3c;
+
+        }
+
+
+
+
+        .service .btn {
+            display: inline-block;
+            border-radius: 70px;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+            width: 100px;
+            color: white;
+            margin-top: 20px;
+            background-color: #F2B310;
+        }
+
+        .service .btn:hover {
+            width: 150px;
+            border-color: #F2B310;
+            color: white;
+
+        }
+
+        .service .btn button {
+            border-radius: 70px;
+
+        }
+
+        .service .tag {
+            background-color: #fa0;
+            position: absolute;
+            left: -10px;
+            ;
+            top: 10px;
+            padding: 6px 10px;
+
+        }
+
+        .service .tag::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid #0000;
+            border-top: 6px solid #c60;
+        }
+
+        /* 跑馬燈 */
+        .marquee-container {
+            position: absolute;
+            height: 90vh;
+            left: 10px;
+            top: 10%;
+
+        }
+
+        .marquee-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+            font-size: 50px;
+            font-family: 'Jockey One', sans-serif;
+            color: #000000;
+            writing-mode: vertical-lr;
+            /* text-orientation: upright; */
+
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translatey(-100%);
+            }
+
+            100% {
+                transform: translatey(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- 跑馬燈 -->
+
+
+
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html"><img src="imgs/logo.png" width=105 height=48></a>
+            </div>
+            <nav>
+                <a href="aboutus.html">關於我們</a>
+                <a href="news.html">最新消息</a>
+                <a href="team.html">專業團隊</a>
+                <a href="service.html">服務項目</a>
+                <a href="venus.html">場館介紹</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+        </div>
+
+
+        <div class="header">
+            SERVICE
+        </div>
+
+        <section class="cards">
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    breath fitness breath fitness breath fitness
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>私人教練課程</h2>
+
+                <div class="service">
+
+                    <div class="item">
+                        <h3>體驗課程</h3>
+                        <h4>私人教練課</h4>
+                        <p>一小時教練課程<br>
+                            每人限一次<br>
+                            課程內容會依教練、學生有所不同
+                        </p>
+                        <span>$1500</span>
+
+                        <a href="contact.html" class="btn">立即諮詢</a>
+
+                    </div>
+
+                    <div class="item">
+                        <h3>8 堂課程</h3>
+                        <h4>私人教練課</h4>
+                        <p>一小時教練課程<br>
+                            額外贈送指定時間自主訓練 ( 合約期限內 )<br>
+                            可加購自主訓練課表<br>
+                            可轉讓課程 ( 合約期限內免費 )
+                        </p>
+                        <span>$14600</span>
+                        <a href="contact.html" class="btn">立即諮詢</a>
+                    </div>
+
+                    <div class="item">
+                        <h3>24 堂課程</h3>
+                        <h4>私人教練課</h4>
+                        <p>一小時教練課程<br>
+                            額外贈送指定時間自主訓練 ( 合約期限內 )<br>
+                            可加購自主訓練課表<br>
+                            可轉讓課程 ( 合約期限內免費 )<br>
+                            可分次付款 ( 4期 )<br>
+
+                        </p>
+                        <span>$41500</span>
+                        <a href="contact.html" class="btn">立即諮詢</a>
+                        <div class="tag">熱銷</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>飲食服務、組合方案</h2>
+
+                <div class="service">
+
+                    <div class="item">
+                        <h3>全方位課程</h3>
+                        <h4>營養課 + 教練課</h4>
+                        <p>8 堂教練課 + 8週飲食服務<br>
+                            額外贈送指定時間自主訓練 ( 合約期限內 )<br>
+                            可加購自主訓練課表<br>
+                            可轉讓課程 ( 合約期限內免費 )<br>
+                            可分次付款<br>
+                        </p>
+                        <span>$24000</span>
+
+                        <a href="contact.html" class="btn">立即諮詢</a>
+                    </div>
+
+
+                    <div class="item">
+                        <h3>12周營養課程</h3>
+                        <h4>營養師私人指導</h4>
+                        <p>目標設定<br>
+                            設計飲食菜單<br>
+                            追蹤監督、建議<br>
+                            飲食QA、課後規劃<br>
+                            皆由營養師一對一指導與執行 <br>
+                        </p>
+                        <span>$15000</span>
+                        <a href="contact.html" class="btn">立即諮詢</a>
+                    </div>
+
+                    <div class="item">
+                        <h3>線上增肌減脂課</h3>
+                        <h4>訓練、飲食課表</h4>
+                        <p>週期菜單<br>
+                            飲食QA、建議<br>
+                            客製化課表<br>
+                            飲食服務由營養師一對一指導<br>
+                        </p>
+                        <span>$15000</span>
+                        <a href="contact.html" class="btn">立即諮詢</a>
+                        <div class="tag">熱銷</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="main-footer">
+            <div class="logo">
+                <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
+            </div>
+            <div class="tel">
+                <p>電話:03-4205643 <br>
+                    時間/06:00-23:00 <br>
+                    台北市信義區基隆路一段110號<br>
+                    桃園市桃園區三民路三段120號
+                </p>
+            </div>
+
+            <div class="footer-icon">
+                <p>contact with us</p>
+
+                <div class="icon">
+                    <img src="imgs/fb2.png" alt="fb" width=48 height=48>
+                </div>
+
+                <div class="icon">
+                    <img src="imgs/ig2.png" alt="ig" width=48 height=48>
+                </div>
+                <div class="icon">
+                    <img src="imgs/line 2.png" alt="line" width=48 height=48>
+                </div>
+                <div class="main-footer-contact">
+                    <h3>立即訂閱我們</h3>
+                    <div class="subscribe-container">
+                        <input type="email" id="emailInput" placeholder="輸入你的電子郵件地址">
+                        <button onclick="subscribe()">訂閱</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+</body>
+
+
+<div id="gotop">
+    <img src="imgs/壺鈴.png" alt="壺鈴Top">
+</div>
+<script>
+    window.addEventListener('scroll', function () {
+            if (window.scrollY > 20) {
+                document.getElementById('gotop').style.display = 'block';
+            } else {
+                document.getElementById('gotop').style.display = 'none';
+            }
+        }
+
+    );
+
+
+    document.getElementById('gotop').addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+
+
+</html>

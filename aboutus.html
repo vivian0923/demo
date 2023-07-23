@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>關於我們</title>
+</head>
+<style>
+    body {
+        margin: auto;
+        position: relative;
+    }
+
+
+    .graybg {
+
+        position: absolute;
+        transform: translateY(40%);
+        height: 600px;
+        width: 55%;
+        background-color: #EBEBEC;
+        z-index: -1;
+    }
+
+    .yellowbg {
+        position: absolute;
+        transform: translateY(40%);
+        height: 1800px;
+        width: 55%;
+        background-color: #F4CD6A;
+        z-index: -1;
+
+    }
+
+    .yellowbg-right {
+        position: absolute;
+        top: 35%;
+        right: 0%;
+        transform: translateY(20%);
+        height: 400px;
+        width: 60%;
+        background-color: #F2B310;
+        z-index: -1;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+
+    .card {
+        /* border:5px solid red; */
+        width: 1220px;
+        margin: auto;
+        display: flex;
+
+        align-items: center;
+        line-height: 50px;
+
+    }
+
+    .card .pic {
+
+        width: 580px;
+
+    }
+
+    .card .pic img {
+
+        width: 580px;
+        height: 400px;
+        vertical-align: top;
+    }
+
+    .pic-big .img {
+        vertical-align: top;
+        width: 100px;
+        height: 300px;
+    }
+
+    .card .txt-big {
+
+        width: 500px;
+        padding: 10px;
+        font-size: 16px;
+        height: 200px;
+        margin-right: 40px;
+
+    }
+
+    .card .txt {
+
+        width: 500px;
+        padding: 10px;
+        font-size: 16px;
+        margin-left: 50px;
+
+    }
+
+    .card .txt h3 {
+        font-size: 32px;
+    }
+
+    .card .txt-big h3 {
+        font-size: 32px;
+    }
+
+    .card:nth-child(2n) {
+        flex-direction: row-reverse;
+
+    }
+</style>
+
+<body>
+    <div class="bgdiv">
+        <div class="yellowbg">
+        </div>
+        <div class="graybg">
+        </div>
+        <div class="yellowbg-right">
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html"><img src="imgs/logo.png" width=105 height=48></a>
+            </div>
+            <nav>
+                <a href="aboutus.html">關於我們</a>
+                <a href="news.html">最新消息</a>
+                <a href="team.html">專業團隊</a>
+                <a href="service.html">服務項目</a>
+                <a href="venus.html">場館介紹</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+        </div>
+
+        <div class="header">
+            <div class="txt">
+                abouts us
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="pic">
+                <img src="imgs/關於我們內頁1.jpg">
+            </div>
+            <div class="txt">
+                <h3>全人健康</h3>
+                <p>
+
+                    絕大多數的客戶並非運動員，我們除了提供專項訓練，更透過完整的溝通、教學技巧去關注非運動員的顧客，提高日常功能性的活動能力。提供客製化的方式實踐全人健康。
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="pic-big">
+                <img src="imgs/關於我們內頁4.jpg">
+            </div>
+
+            <div class="txt-big">
+                <h3> 科學化訓練</h3>
+                <p>
+                    身為體適能產業的教育者，我們不只有責任替客戶把關他們的訓練内容更有義務教育客戶良好的姿勢和動作能力，以科學化為基礎，降低傷害發生的風險為輔，協助每一位前來的客戶盡可能達成活動自由、終生健康的狀態。
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="pic">
+                <img src="imgs/關於我們內頁3.jpg">
+            </div>
+            <div class="txt">
+                <h3>實踐企業責任</h3>
+                <p>
+                    特殊族群和中老年人口持續增加，透過適當的訓練，我們能夠幫助中老年人延長健康餘命、改善特殊需求者的健康狀況，將照顧這兩個族群做為超核心企業社會責任的指標，透過回饋社會、打造幸福企業，來提高工作的成就感和落實社會參與。
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="pic">
+                <img src="imgs/關於我們內頁2.jpg">
+            </div>
+            <div class="txt">
+                <h3>健康之美</h3>
+                <p>
+                    透過科學化訓練幫助會員達成理想體態和健康，擁有健康的身體，而讓生活體驗更加豐富、美好。所有的美
+                </p>
+            </div>
+        </div>
+
+        <div class="main-footer">
+            <div class="logo">
+                <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
+            </div>
+            <div class="tel">
+                <p>電話:03-4205643 <br>
+                    時間/06:00-23:00 <br>
+                    台北市信義區基隆路一段110號<br>
+                    桃園市桃園區三民路三段120號
+                </p>
+            </div>
+
+            <div class="footer-icon">
+                <p>contact with us</p>
+
+                <div class="icon">
+                    <img src="imgs/fb2.png" alt="fb" width=48 height=48>
+                </div>
+
+                <div class="icon">
+                    <img src="imgs/ig2.png" alt="ig" width=48 height=48>
+                </div>
+                <div class="icon">
+                    <img src="imgs/line 2.png" alt="line" width=48 height=48>
+                </div>
+
+                <div class="main-footer-contact">
+                    <h3>立即訂閱我們</h3>
+                    <div class="subscribe-container">
+                        <input type="email" id="emailInput" placeholder="輸入你的電子郵件地址">
+                        <button onclick="subscribe()">訂閱</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="gotop">
+                <img src="imgs/壺鈴.png" alt="壺鈴Top">
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener('scroll', function () {
+                    if (window.scrollY > 100) {
+                        document.getElementById('gotop').style.display = 'block';
+                    } else {
+                        document.getElementById('gotop').style.display = 'none';
+                    }
+                }
+
+            );
+
+
+            document.getElementById('gotop').addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+
+</body>
+
+</html>

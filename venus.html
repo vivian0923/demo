@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>場館環境</title>
+</head>
+<style>
+    body {
+        margin: auto;
+    }
+
+    .venus {
+        min-width: 768px;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .venus .btn,
+    .item .txt button {
+        background-color: #F2B310;
+        border-radius: 70px;
+        padding: 10px 40px;
+        border-style: none;
+        width: 200px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 40px 20px; */
+        padding: 60px 0;
+
+
+
+    }
+
+    .item .txt {
+        width: 400px;
+        margin: 10px;
+        line-height: 50px;
+        padding: 10px 30px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: white;
+
+    }
+
+    .item .txt h3 {
+        font-size: 30px;
+    }
+
+    .item .map img {
+        padding-left: 20px;
+    }
+
+
+
+    .pic img {
+        width: 400px;
+        height: 500px;
+        margin: 0 30px;
+    }
+
+
+
+    .itemdiv {
+        position: relative;
+
+    }
+
+    .itemdiv a {
+        display: inline-block;
+        margin-top: 30px;
+    }
+
+
+    .graybg {
+        position: absolute;
+        top: 0%;
+        right: 0;
+        z-index: -1;
+        background: #EBEBEC;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div class="venus">
+
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html"><img src="imgs/logo.png" width=105 height=48></a>
+            </div>
+            <nav>
+                <a href="aboutus.html">關於我們</a>
+                <a href="news.html">最新消息</a>
+                <a href="team.html">專業團隊</a>
+                <a href="service.html">服務項目</a>
+                <a href="venus.html">場館介紹</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+        </div>
+
+        <div class="header">
+            <div class="txt">
+                venus
+            </div>
+        </div>
+
+        <!-- 設定背景色的定位 -->
+        <div class="itemdiv">
+            <a href="#" class="btn">台北 桃園</a>
+
+
+            <div class="item">
+                <div class="txt">
+                    <h3>基本設施說明</h3>
+                    <p>占地 500 坪，一支手機就可進場運動。所有重訓器材皆選用業界生物力學角度最佳的 Cybex 與 Life Fitness，還有超過 12 個可以執行槓鈴肌力訓練的空間。另外，更配有寬 6
+                        米、長 20
+                        米的大草皮，可以進行任何移動訓練。最頂級的動作訓練教室更是配置了 4 台 Kieser 空壓式阻力 cable，讓你挑戰各種動作的變化！</p>
+
+                    <a href="contact.html">
+                        <button>預約參觀</button>
+                    </a>
+                </div>
+
+                <div class="map">
+                    <img src="imgs/map.jpg" alt="地圖" width="600px">
+                </div>
+
+                <div class="graybg"> </div>
+
+            </div>
+        </div>
+
+        <div class="pic">
+            <img src="imgs/環境11 venus.jpg" alt="場館環境">
+            <img src="imgs/環境12 venus.jpg" alt="場館環境">
+        </div>
+
+        <div class="main-footer">
+            <div class="logo">
+                <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
+            </div>
+            <div class="tel">
+                <p>電話:03-4205643 <br>
+                    時間/06:00-23:00 <br>
+                    台北市信義區基隆路一段110號<br>
+                    桃園市桃園區三民路三段120號
+                </p>
+            </div>
+
+            <div class="footer-icon">
+                <p>contact with us</p>
+
+                <div class="icon">
+                    <img src="imgs/fb2.png" alt="fb" width=48 height=48>
+                </div>
+
+                <div class="icon">
+                    <img src="imgs/ig2.png" alt="ig" width=48 height=48>
+                </div>
+                <div class="icon">
+                    <img src="imgs/line 2.png" alt="line" width=48 height=48>
+                </div>
+
+                <div class="main-footer-contact">
+                    <h3>立即訂閱我們</h3>
+                    <div class="subscribe-container">
+                        <input type="email" id="emailInput" placeholder="輸入你的電子郵件地址">
+                        <button onclick="subscribe()">訂閱</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="gotop">
+            <img src="imgs/壺鈴.png" alt="壺鈴Top">
+        </div>
+        <script>
+            window.addEventListener('scroll', function () {
+                    if (window.scrollY > 20) {
+                        document.getElementById('gotop').style.display = 'block';
+                    } else {
+                        document.getElementById('gotop').style.display = 'none';
+                    }
+                }
+
+            );
+
+
+            document.getElementById('gotop').addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+
+</body>
+
+</html>
