@@ -112,6 +112,8 @@
         flex-direction: row-reverse;
 
     }
+
+   
 </style>
 
 <body>
@@ -125,11 +127,25 @@
     </div>
 
     <div class="wrap">
+
+        <input type="checkbox" name="" id="menu-switch">
         <div class="main-header">
             <div class="logo">
-                <a href="index.html"><img src="imgs/logo.png" width=105 height=48></a>
+                <a href="index.html">
+                    <img src="imgs/logo.png" width=105 height=48>
+                </a>
             </div>
-            <nav>
+
+
+            <div class="hb">
+                <label for="menu-switch"> 
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                 </label>
+            </div>
+
+            <nav class="main-nav">
                 <a href="aboutus.html">關於我們</a>
                 <a href="news.html">最新消息</a>
                 <a href="team.html">專業團隊</a>
@@ -137,11 +153,12 @@
                 <a href="venus.html">場館介紹</a>
                 <a href="contact.html">聯絡我們</a>
             </nav>
+            <label for="menu-switch" class="backdrop"></label>
         </div>
 
         <div class="header">
             <div class="txt">
-                abouts us
+                ABOUTS US
             </div>
         </div>
 
@@ -236,7 +253,7 @@
             </div>
 
             <div id="gotop">
-                <img src="imgs/壺鈴.png" alt="壺鈴Top">
+                <img src="imgs/page up.png" alt="壺鈴Top">
             </div>
         </div>
 
