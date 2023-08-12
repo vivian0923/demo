@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v1">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
 
     <title>首頁</title>
     <style>
@@ -41,6 +46,7 @@
         }
 
         .index-aboutus .txt {
+            position: relative;
             padding: 40px 50px 40px 50px;
             width: 600px;
             line-height: 200%;
@@ -92,7 +98,6 @@
         .course img {
             width: 100px;
             justify-content: center;
-
         }
 
         .course .feature {
@@ -116,8 +121,7 @@
         }
 
         .card {
-            width: 700px;
-            margin: 30px auto;
+            padding-bottom: 70px;
             display: flex;
             align-items: center;
 
@@ -126,6 +130,12 @@
         .idea h2 {
             margin: 40px;
             font-size: 32px;
+        }
+
+        .card_carousel_img_block{
+            max-width: 520px;
+            height: 230px;
+            margin: auto;
         }
 
         .card .pic img {
@@ -137,7 +147,7 @@
             width: 50%;
             box-sizing: border-box;
             font-size: 16px;
-            margin-left: 20px;
+/*            margin-left: 20px;*/
             text-align: left;
             line-height: 180%;
         }
@@ -162,6 +172,7 @@
         .venus h2 {
             margin: 10px;
             font-size: 32px;
+            padding-top: 15px
         }
 
         .venus .card {
@@ -171,17 +182,25 @@
 
         }
 
-        .venus .card img {
-            width: 500px;
+        .venus .card-bg-img{
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            padding: 30%;
+        }
+/*        .venus .card img {
+            width: 100%;
+            object-fit: cover;
             height: 300px;
             display: flex;
             justify-content: center;
-
-        }
+        }*/
 
         .venus .card .items {
             line-height: 2;
             margin: 30px;
+            width: 50%;
+            max-width: 450px;
         }
 
         .venus .card .items h3 {
@@ -249,23 +268,282 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
-            
+            margin-bottom: 25px;
         }
 
-        .video-player {
-            margin: 0 10px;
-            width: 60%;
-
+        .vdo-block{
+            padding: 10px;
         }
-
-        .video-player::-webkit-media-controls-enclosure {
+/*        .video-player::-webkit-media-controls-enclosure {
             display: none;
-        }
+        }*/
 
         /* 隱藏所有控件 */
-        .video-player:hover::-webkit-media-controls-enclosure {
+/*        .video-player:hover::-webkit-media-controls-enclosure {
             position: absolute;
             display: block;
+        }*/
+
+        .aboutus-media-bg{
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .img_idea,
+        .img_idea .slick-list,
+        .img_idea .slick-track
+        {
+            height: 100% !important;
+        }
+
+        .img_idea .slick-slide div img{
+            object-fit: contain !important;
+        }
+
+        .img_idea .slick-dots{
+            bottom: -45px !important;
+        }
+
+        .img_idea .slick-dots li button:before {
+            color: black !important;
+        }
+
+        .img_idea .slick-prev:before{
+            background-image: url(imgs/left-arrow.png);
+            content: '';
+            width: 20px;
+            height: 20px;
+            display: block;
+            background-size: contain;
+        }
+
+        .img_idea .slick-prev {
+            left: -35px;
+        }
+
+        .img_idea .slick-next:before{
+            background-image: url(imgs/right-arrow.png);
+            content: '';
+            width: 20px;
+            height: 20px;
+            display: block;
+            background-size: contain;
+        }
+
+        .img_idea .slick-next {
+            z-index: 10;
+            right: -35px;
+        }
+
+        .img_banner .slick-slide div img{
+            object-fit: cover !important;
+        }
+
+        .carousel_img .slick-dots{
+            display: block;
+            position: absolute;
+            bottom: 25px;
+        }
+
+        .carousel_img .slick-slide div {
+            height: 100%; 
+            width: 100%; 
+        }
+
+        .carousel_img .slick-slide div img{
+            height: 100%; 
+            width: 100%; 
+            object-fit: cover;
+        }
+
+        .carousel_img .slick-dots li.slick-active button:before {
+            color: white;
+        }
+
+        .carousel_img .slick-dots li button:before {
+            color: white;
+        }
+
+        .carousel_img{
+            margin-bottom: -4px !important;
+        }
+
+        .carousel_img .slick-track{
+            height: 500px;
+        }
+
+        .carousel_img .slick-slide li{
+            height: 100%;
+        }
+
+        .slick-prev{
+            z-index: 10;
+            left: 15px;
+        }
+
+        .slick-next {
+            z-index: 10;
+            right: 15px;
+        }
+
+        .left_carousel_block{
+            width: 35%;
+        }
+
+        .right_carousel_block{
+            width: 65%;
+            display: flex;
+            align-items: center;
+        }
+
+        .idea_carousel_block{
+            display: flex;
+        }
+
+        .banner_block{
+            position: absolute;
+            left: 12%;
+            top: 45%;              
+            height: fit-content !important; 
+            width: fit-content !important;
+        }
+        .banner_text{
+            text-align: center;
+            letter-spacing: 5px;
+            font-size: 26px;
+        }
+        .banner_text_title{
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        @media screen and (min-width: 991px) {
+            .img_banner .slick-track{
+                height: 650px;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            .slick-track{
+                height: 350px;
+            }
+            .course .feature {
+                padding: unset;
+            }
+            .index-aboutus .pic img {
+                height: 100%;
+                object-fit: cover;
+                object-position: right;
+            }
+        }
+        @media screen and (max-width: 667px) {
+            #gotop{
+                display: none !important;
+            }
+            .banner_text{
+                font-size: 20px;
+            }
+            .banner_text_title{
+                font-size: 22px;
+                 margin-bottom: 30px;
+            }
+            .banner_block{
+                top: 55%;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+            #banner_img_2{
+                object-position: -600px 0;
+            }
+            .mobile-padding{
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+            .bigpic p {
+                right: 0;
+                left: 0;
+                top: 28%;
+                font-size: 28px;
+            }
+            .bigpic .btn{
+                top: 45%;
+            }
+            .img_idea .left_carousel_block img{
+                max-width: 250px;
+                margin: auto;
+            }
+            .right_carousel_block{
+                padding-top: 30px;
+            }
+            .idea_carousel_block{
+                display: block !important;
+            }
+            .card_carousel_img_block{
+                height: unset;
+                max-width: 275px;
+            }
+            .carousel_img .slick-track{
+                height: 400px;
+            }
+            .course .feature {
+                padding: unset;
+            }
+            .index-aboutus{
+                display: block;
+            }
+            .index-aboutus .pic img {
+                height: 100%;
+                object-fit: cover;
+                object-position: right;
+            }
+            .index-aboutus .txt{
+                width: 100%;
+            }
+            .video-bg,.index-course{
+                padding:40px 50px 40px 50px;
+            }
+            .video-container,.card,.course{
+                display: block !important;
+            }
+            .course .feature{
+                margin: 50px 0;
+                width: 100%;
+            }
+            .course .feature p{
+                margin: 0;
+            }
+            .venus .card{
+                padding-bottom: 0;
+            }
+            .venus .card .items{
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                width: 100%;
+            }
+            .index-aboutus .pic{
+                display: none;
+            }
+            .aboutus-media-bg{
+                display: block;
+            }
+            .aboutus-media-bg::before {
+              content: "";
+              width: 100%;
+              position: absolute;
+              height: 100%;
+              background-color: rgb(0 0 0 / 75%);
+            }
+            .aboutus-text{
+                color: #fff !important;
+            }
         }
     </style>
 </head>
@@ -312,28 +590,51 @@
             </nav>
             <label for="menu-switch" class="backdrop"></label>
         </div>
-
-
-        <div class="banner">
-            <img src="imgs/banner1.jpg" alt="首頁輪播圖">
+        <div>
+            <ul class="carousel_img img_banner">
+                <li>
+                    <div style="position: relative;">
+                        <div class="banner_block">
+                            <div class="banner_text">
+                                <div class="banner_text_title" style="color: white;">
+                                    SUCCESS STARTS<br>
+                                    WITH SELF-DISCIPLINE
+                                </div>
+                            </div>
+                        </div>
+                        <img src="imgs/banner_1.jpg" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div style="position: relative;">
+                        <div class="banner_block">
+                            <div class="banner_text">
+                                <div class="banner_text_title" style="color: #ce777b;font-weight: 900;">女性安心的運動空間</div>
+                                <div>體態雕塑訓練 ● 客製化減重課程</div>
+                            </div>
+                        </div>
+                        <img id="banner_img_2" src="imgs/banner_2.jpg" alt="">
+                    </div>
+                </li>
+            </ul>
         </div>
-
-
 
         <div class="index-aboutus">
             <div class="pic">
                 <img src="imgs/關於我們(首頁).jpg" alt="首頁關於我們圖">
             </div>
             <div class="txt ">
-                <h2>關於我們</h2>
-                <p>除了提供專業的客製化一對一教學，
-                    也提供上課的學員自主練習，
-                    場館全面採用海外原裝進口的商用頂級有氧器材、重訓器材，
-                    提供優質安全的訓練環境，帶給大家最好的運動體驗。
+                <div class="aboutus-media-bg" style="background-image: url('imgs/關於我們(首頁).jpg');"></div>
+                <div class="aboutus-text" style="position: inherit;">
+                    <h2>關於我們</h2>
+                    <p>除了提供專業的客製化一對一教學，
+                        也提供上課的學員自主練習，
+                        場館全面採用海外原裝進口的商用頂級有氧器材、重訓器材，
+                        提供優質安全的訓練環境，帶給大家最好的運動體驗。
 
-                </p>
-                <a href="aboutus.html" class="btn">了解更多</a>
-
+                    </p>
+                    <a href="aboutus.html" class="btn">了解更多</a>
+                </div>
             </div>
         </div>
 
@@ -355,13 +656,59 @@
 
             </div>
         </div>
-
         <div class="idea">
             <h2>學員心得分享</h2>
             <div class="card">
-
-
-                <img src="imgs/left-arrow 4.png" alt="右箭頭" width="20px" class="left-arrow">
+                <div class="card_carousel_img_block">
+                    <ul class="carousel_img img_idea">
+                        <li>
+                            <div class="idea_carousel_block">
+                                <div class="left_carousel_block">
+                                    <img src="imgs/before.jpg" alt="">
+                                </div>
+                                <div class="right_carousel_block txt">
+                                    <div style="height: fit-content;">
+                                        <h3>不喜歡運動的我 漸漸開始運動</h3>
+                                        <p>
+                                            我本身就是四隻細細瘦瘦的身材體重 48 公斤，以體脂肪26~27，左右身材來說，覺得還蠻標準的，但肥肥鬆鬆的肚子有時後讓我很討厭，但也沒有什麼想要改變的動力，反正看起來瘦瘦的就好，突然有一天看到...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="idea_carousel_block">
+                                <div class="left_carousel_block">
+                                    <img src="imgs/before1.jpg" alt="">
+                                </div>
+                                <div class="right_carousel_block txt">
+                                    <div style="height: fit-content;">
+                                        <h3>不喜歡運動的我 漸漸開始運動</h3>
+                                        <p>
+                                            我本身就是四隻細細瘦瘦的身材體重 48 公斤，以體脂肪26~27，左右身材來說，覺得還蠻標準的，但肥肥鬆鬆的肚子有時後讓我很討厭，但也沒有什麼想要改變的動力，反正看起來瘦瘦的就好，突然有一天看到...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="idea_carousel_block">
+                                <div class="left_carousel_block">
+                                    <img src="imgs/before2.jpg" alt="">
+                                </div>
+                                <div class="right_carousel_block txt">
+                                    <div style="height: fit-content;">
+                                        <h3>不喜歡運動的我 漸漸開始運動</h3>
+                                        <p>
+                                            我本身就是四隻細細瘦瘦的身材體重 48 公斤，以體脂肪26~27，左右身材來說，覺得還蠻標準的，但肥肥鬆鬆的肚子有時後讓我很討厭，但也沒有什麼想要改變的動力，反正看起來瘦瘦的就好，突然有一天看到...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+ <!--                <img src="imgs/left-arrow 4.png" alt="右箭頭" width="20px" class="left-arrow">
                 <img src="imgs/before.jpg" alt="學員before after">
 
 
@@ -370,32 +717,34 @@
                     <p>我本身就是四隻細細瘦瘦的身材體重 48 公斤，以體脂肪 26~27
                         左右身材來說，覺得還蠻標準的，但肥肥鬆鬆的肚子有時後讓我很討厭，但也沒有什麼想要改變的動力，反正看起來瘦瘦的就好，突然有一天看到...</p>
                 </div>
-                <img src="imgs/right-arrow.png" alt="右箭頭" width="20px" class="right-arrow">
+                <img src="imgs/right-arrow.png" alt="右箭頭" width="20px" class="right-arrow"> -->
             </div>
 
-            <img src="imgs/list.png" alt="輪播圖 3個點" width="30px">
+            <!-- <img src="imgs/list.png" alt="輪播圖 3個點" width="30px"> -->
 
         </div>
 
-        <div class="venus">
+        <div class="venus mobile-padding">
             <h2>our store<br>
                 - 場館資訊 -
             </h2>
             <div class="card">
                 <div class="items">
-                    <a href="#"><img src="imgs/環境1 index.jpg" alt="首頁環境圖"></a>
+                    <div class="card-bg-img" style="background-image: url('imgs/環境1 index.jpg');"></div>
+                    <!-- <a href="#"><img src="imgs/環境1 index.jpg" alt="首頁環境圖"></a> -->
                     <h3>台北</h3>
                     <p>台北市信義區基隆路一段110號<br>
-                        電話 / 02-22135000<br>
-                        時間 / 06:00-23:00</p>
+                        電話 /02-22135000<br>
+                        時間 /06:00-23:00</p>
                 </div>
 
                 <div class="items">
-                    <a href="#"><img src="imgs/環境2 index.jpg" alt="首頁環境圖"></a>
+                    <div class="card-bg-img" style="background-image: url('imgs/環境2 index.jpg');"></div>
+                    <!-- <a href="#"><img src="imgs/環境2 index.jpg" alt="首頁環境圖"></a> -->
                     <h3>桃園</h3>
                     <p>桃園市桃園區三民路三段120號<br>
                         電話 /03-4258711<br>
-                        時間 / 06:00-23:00</p>
+                        時間 /06:00-23:00</p>
                 </div>
             </div>
         </div>
@@ -407,25 +756,21 @@
             <a href="contact.html" class="btn">立即體驗</a>
         </div>
 
-        <div class="video-bg">
+        <div class="video-bg mobile-padding">
             <div class="video-txt">
                 <h1>素人體態大改造</h1>
             </div>
-
-
             <div class="video-container">
-
-
-
-                <video class="video-player" width="600" height="360" controls>
-                    <source src="video/video 1.mp4" type="video/mp4">
-                </video>
-
-
-                <video class="video-player" width="600" height="360" controls>
-                    <source src="video/video 3.mp4" type="video/mp4">
-                </video>
-
+                <div class="vdo-block">
+                    <video class="video-player" width="100%" autoplay muted loop controls>
+                        <source src="video/video 1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="vdo-block">
+                    <video class="video-player" width="100%" autoplay muted loop controls>
+                        <source src="video/video 3.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
 
@@ -436,7 +781,7 @@
                 <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
             </div>
             <div class="tel">
-                <p>電話:03-4205643 <br>
+                <p>電話/03-4205643 <br>
                     時間/06:00-23:00 <br>
                     台北市信義區基隆路一段110號<br>
                     桃園市桃園區三民路三段120號
@@ -489,6 +834,20 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+
+        $('.img_banner').slick({
+            prevArrow: false,
+            nextArrow: false,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+
+        $('.img_idea').slick({
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
         });
     </script>
 
