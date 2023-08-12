@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="script.js">
+    <title>場館環境</title>
+</head>
+<style>
+    body {
+        margin: auto;
+    }
+
+    .venus-side {
+        padding-top: 20px;
+       
+    }
+
+    .venus-top-nav {
+        width: 250px;
+        background-color: #F2B310;
+        border-radius: 70px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+    }
+
+    .venus-top-nav ul {
+      
+        display: flex;
+        margin:  10px;
+        padding:5px;
+    }
+
+    .venus-top-nav li {
+        list-style: none;
+        /* border: 1px solid black; */
+       
+
+    }
+
+    .venus-top-nav a {
+        color: black;
+        text-decoration: none;
+        margin:10px;
+    }
+
+    .venus-top-nav li:hover {
+        background-color: #EBF1D6;
+        padding:5px;
+        border-radius: 70px;
+        border-style: none;
+
+    }
+
+    /* 當摸到li時裡面的a可以同時換字顏色 */
+    .venus-top-nav li:hover a {
+        color: #F2B310;
+        margin:5px;
+    }
+
+    .venus {
+        min-width: 768px;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .venus .btn,
+    .item .txt button {
+        background-color: #F2B310;
+        border-radius: 70px;
+        padding: 10px 40px;
+        border-style: none;
+        width: 200px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 40px 20px; */
+        padding: 60px 0;
+    }
+
+    .item .txt {
+        width: 400px;
+        margin: 10px;
+        line-height: 50px;
+        padding: 10px 30px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: white;
+
+    }
+
+    .item .txt h3 {
+        font-size: 30px;
+    }
+
+    .item .map iframe {
+        padding-left: 20px;
+    }
+
+
+    .banner_container {
+        
+        position: relative; 
+        /* margin:auto; */
+         text-align: center;
+        width: 1224px;
+        height: 397px; 
+        margin:auto;
+        /* 超出隱藏 */
+         overflow: hidden; 
+     } 
+
+    ul.img_box {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+
+    .img_box li {
+        float: left;
+        list-style: none;
+    } 
+
+    /* 圖片大小 */
+    .img_box li img {
+        width: 612px;
+    }
+
+    /* 小圓點 */
+    .sel_box {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sel_box li {
+        list-style: none;
+        /* 轉換為行內塊元素 -- 一行顯示 */
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        margin-right: 3px;
+        border-radius: 5px;
+        transition: all 0.4s;
+    }
+
+    /* 當前圖片的小圖點樣式 */
+    .sel_box .cur {
+        background-color: gray !important;
+        transform: scale(1.3);
+    }
+
+
+    /* 背景色 */
+    .itemdiv {
+        position: relative;
+    }
+
+  
+
+
+    .graybg {
+        position: absolute;
+        top: 0%;
+        right: 0;
+        z-index: -1;
+        background: #EBEBEC;
+        width: 100%;
+        height: 100%;
+    }
+
+   
+
+     /* 手機 */
+     @media screen and (max-width: 414px){
+        .item {
+            flex-direction: column;
+            
+        }
+
+        .item h3{
+            margin-bottom: 30px;
+        }
+
+        .item .txt {
+            width: 80%;
+            height: 450px;
+            line-height: 30px;
+            padding:30px;
+            
+        }
+        .item p{
+          padding-bottom:10px;
+        }
+        #gotop{
+            display: none;
+        }
+
+        .banner_container {
+            flex-direction: column;
+        }
+        .banner_container {
+            width: 100%;
+            height: 84vw; 
+        } 
+        .main-footer {
+            flex-direction: column;
+        }
+        .item .map iframe {
+            width: 100%;
+            margin-top: 20px;
+            height: 300px;
+            
+        }
+        .venus {
+            min-width: 100%;
+        }
+    }
+
+    /* @media screen and (min-width: 768px) and (hover:hover) {
+        .venus-top-nav li:hover {
+        background-color: #EBF1D6;
+        border-radius: 70px;
+        border-style: none;
+        }
+        .venus-top-nav li:hover a {
+        color: #F2B310;
+    }
+
+    } */
+
+
+</style>
+
+<body>
+    <div class="venus">
+
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo.png" width=105 height=48>
+                </a>
+            </div>
+
+
+            <div class="hb">
+                <label for="menu-switch">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <nav class="main-nav">
+                <a href="aboutus.html">關於我們</a>
+                <a href="news.html">最新消息</a>
+                <a href="team.html">專業團隊</a>
+                <a href="service.html">服務項目</a>
+                <a href="venus.html">場館介紹</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+            <label for="menu-switch" class="backdrop"></label>
+        </div>
+
+        <div class="header">
+            <div class="txt">
+                VENUS
+            </div>
+        </div>
+
+        <!-- 設定背景色的定位 -->
+        <div class="itemdiv">
+
+            <div class="venus-side">
+                <nav class="venus-top-nav">
+
+                    <ul>
+                        <li><a href="">台北</a></li>
+                        <li><a href="">桃園</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="item">
+                <div class="txt">
+                    <h3>基本設施說明</h3>
+                    <p>占地 500 坪，一支手機就可進場運動。所有重訓器材皆選用業界生物力學角度最佳的 Cybex 與 Life Fitness，還有超過 12 個可以執行槓鈴肌力訓練的空間。另外，更配有寬 6
+                        米、長 20
+                        米的大草皮，可以進行任何移動訓練。最頂級的動作訓練教室更是配置了 4 台 Kieser 空壓式阻力 cable，讓你挑戰各種動作的變化！</p>
+
+                    <a href="contact.html">
+                        <button>預約參觀</button>
+                    </a>
+                </div>
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2491788490893!2d121.22244241111936!3d24.95763547777358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ea50c732a5%3A0x1b5e6ee66e9fec49!2z57ev6IKyVGliYU1l6ZmE6Kit5Lit5aOi6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1690271708341!5m2!1szh-TW!2stw"
+                        width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+
+                <div class="graybg"> </div>
+
+            </div>
+        </div>
+
+    
+
+        <div class="banner_container">
+            <!-- 6張圖片 -->
+            <ul class="img_box">
+                <li><img src="imgs/venus/場館環境.jpg" alt=""></li>
+                <li><img src="imgs/venus/場館環境2.jpg" alt=""></li>
+                <li><img src="imgs/venus/場館環境3.jpg" alt=""></li>
+                <li><img src="imgs/venus/場館環境4.jpg" alt=""></li>
+                <li><img src="imgs/venus/環境4.jpg" alt=""></li>
+                <li><img src="imgs/venus/環境.jpg" alt=""></li>
+                <li><img src="imgs/venus/環境1 index.jpg" alt=""></li>
+                <li><img src="imgs/venus/場館環境.jpg" alt=""></li>
+                <li><img src="imgs/venus/場館環境2.jpg" alt=""></li>
+
+            </ul>
+
+        
+
+            <!-- 中間圓點 -->
+            <ul class="sel_box">
+                <!-- 自定義屬性 -->
+                <li data-index="0"></li>
+                <li data-index="1"></li>
+                <li data-index="2"></li>
+              
+            </ul>
+
+
+
+        </div>
+    
+
+        <div class="main-footer">
+            <div class="logo">
+                <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
+            </div>
+            <div class="tel">
+                <p>電話:03-4205643 <br>
+                    時間/06:00-23:00 <br>
+                    台北市信義區基隆路一段110號<br>
+                    桃園市桃園區三民路三段120號
+                </p>
+            </div>
+
+            <div class="footer-icon">
+                <p>contact with us</p>
+
+                <div class="icon">
+                    <img src="imgs/fb2.png" alt="fb" width=48 height=48>
+                </div>
+
+                <div class="icon">
+                    <img src="imgs/ig2.png" alt="ig" width=48 height=48>
+                </div>
+                <div class="icon">
+                    <img src="imgs/line 2.png" alt="line" width=48 height=48>
+                </div>
+
+                <div class="main-footer-contact">
+                    <h3>立即訂閱我們</h3>
+                    <div class="subscribe-container">
+                        <input type="email" id="emailInput" placeholder="輸入你的電子郵件地址">
+                        <button onclick="subscribe()">訂閱</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="gotop">
+            <img src="imgs/page up.png" alt="壺鈴Top">
+        </div>
+        <script>
+            window.addEventListener('scroll', function () {
+                    if (window.scrollY > 20) {
+                        document.getElementById('gotop').style.display = 'block';
+                    } else {
+                        document.getElementById('gotop').style.display = 'none';
+                    }
+                }
+
+            );
+
+
+            document.getElementById('gotop').addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            let img_box = document.querySelector('.img_box');
+            let imgs = document.querySelectorAll('img');
+            let sel_box = document.querySelector('.sel_box')
+            let lis = sel_box.querySelectorAll('li');
+            let left_btn = document.querySelector('.left_btn');
+            let right_btn = document.querySelector('.right_btn');
+            // 記錄第幾張圖片
+            let index = 0;
+            let timer = null; // 定時器
+
+            // 設定圖片容器大小
+            // imgContainerW：img_box本身寬度，為400
+            let imgContainerW = img_box.offsetWidth
+            img_box.style.width = imgContainerW * imgs.length + 'px'
+            // 設定容器位置
+            img_box.style.left = 0 + 'px';
+
+            // 設定第一個小圖片作為當前按鈕
+            lis[0].className = 'cur'
+
+            function swapImg() {
+                // 修改img_box的定位，往左偏移 index * imgContainerW
+                img_box.style.left = -index * imgContainerW + 'px';
+                // 排他演演算法
+                for (let i = 0; i < lis.length; i++) {
+                    lis[i].className = '';
+                }
+                // 修改小圖示的樣式
+                lis[index].className = 'cur'
+            }
+
+            function swapFormat() {
+                index++; // 進入下一張圖片
+                // 如果是在最後一張圖片
+                if (index >= 3) {
+                    // 此處是為了防止頻繁點選按鈕，index++，導致index超過4，變成5、6、7...
+                    // 當index>=4，我們強行讓其等於6,類似防抖
+                    index = 3;
+                    img_box.style.transition = 'all, linear, 1s';
+                    img_box.style.left = -index * imgContainerW + 'px';
+                    for (let i = 0; i < lis.length; i++) {
+                        lis[i].className = '';
+                    }
+                    // 修改小圖示的樣式
+                    lis[0].className = 'cur'
+
+                    // 此處就是我們為實現無縫輪播，做的手腳 
+                    // 通過延時定時器，當圖片過渡完，立刻馬上切換到第一張圖片
+                    setTimeout(function () {
+                        index = 0; // 第一張圖片
+                        img_box.style.transition = ''; // 無過度
+                        swapImg();
+                    }, 1500)
+
+                    // 如果是其它圖片，正常過渡切換
+                } else {
+                    img_box.style.transition = 'all, linear, 1.5s';
+                    swapImg();
+                }
+            }
+
+            // 新增定時器，呼叫函數
+            timer = setInterval(swapFormat, 3000)
+
+            // 點選右箭頭，圖片移動方式與自動播放一樣
+            right_btn.addEventListener('click', function () {
+                swapFormat();
+            })
+
+
+            // 點選左箭頭
+            left_btn.addEventListener('click', function () {
+                index--;
+                // 如果要切換到第四章
+                if (index < 0) {
+                    index = -1
+                    img_box.style.transition = 'all, linear, 1.5s';
+                    img_box.style.left = -index * imgContainerW + 'px';
+                    for (let i = 0; i < lis.length; i++) {
+                        lis[i].className = '';
+                    }
+                    // 修改小圖示的樣式
+                    lis[3].className = 'cur'
+
+                    // "出老千",迅速切換
+                    setTimeout(function () {
+                        index = 3
+                        img_box.style.transition = '';
+                        swapImg();
+                    }, 1000)
+
+                } else {
+                    img_box.style.transition = 'all, linear, 1.5s';
+                    swapImg();
+                }
+            })
+
+            // 當滑鼠在圖片上、左箭頭、右箭頭時清除定時器，即圖片不輪播
+            img_box.addEventListener('mouseover', function () {
+                clearInterval(timer)
+            })
+
+            right_btn.addEventListener('mouseover', function () {
+                clearInterval(timer)
+            })
+
+            left_btn.addEventListener('mouseover', function () {
+                clearInterval(timer)
+            })
+
+            // 當滑鼠離開圖片、左箭頭、右箭頭時開啟定時器，即圖片繼續輪播
+            img_box.addEventListener('mouseout', function () {
+                timer = setInterval(swapFormat, 3000)
+            })
+
+            left_btn.addEventListener('mouseout', function () {
+                timer = setInterval(swapFormat, 3000)
+            })
+
+            right_btn.addEventListener('mouseout', function () {
+                timer = setInterval(swapFormat, 3000)
+            })
+        </script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
