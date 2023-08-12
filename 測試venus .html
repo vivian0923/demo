@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <title>場館環境</title>
+</head>
+<style>
+    body {
+        margin: auto;
+    }
+
+    .venus-side {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .venus-top-nav {
+        width: 250px;
+        background-color: #F2B310;
+        border-radius: 70px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .venus-top-nav ul {
+        border: 2px solid red;
+        display: flex;
+        margin: 10px;
+
+    }
+
+    .venus-top-nav li {
+        list-style: none;
+        /* border: 1px solid black; */
+
+    }
+
+    .venus-top-nav a {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .venus-top-nav li:hover {
+        background-color: #EBF1D6;
+        border-radius: 70px;
+        border-style: none;
+
+    }
+
+    /* 當摸到li時裡面的a可以同時換字顏色 */
+    .venus-top-nav li:hover a {
+        color: #F2B310;
+    }
+
+    .venus {
+        min-width: 768px;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .venus .btn,
+    .item .txt button {
+        background-color: #F2B310;
+        border-radius: 70px;
+        padding: 10px 40px;
+        border-style: none;
+        width: 200px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin: 40px 20px; */
+        padding: 60px 0;
+
+
+
+    }
+
+    .item .txt {
+        width: 400px;
+        margin: 10px;
+        line-height: 50px;
+        padding: 10px 30px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: white;
+
+    }
+
+    .item .txt h3 {
+        font-size: 30px;
+    }
+
+    .item .map iframe {
+        padding-left: 20px;
+    }
+
+    /* 背景色 */
+    .itemdiv {
+        position: relative;
+
+
+    }
+
+    /* .itemdiv a {
+        display: inline-block;
+        margin-top: 30px;
+    } */
+
+
+    .graybg {
+        position: absolute;
+        top: 0%;
+        right: 0;
+        z-index: -1;
+        background: #EBEBEC;
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner_container {
+        border: 2px solid red;
+        position: relative;
+        /* margin:auto; */
+        text-align: center;
+        width: 100%;
+        height: 408px;
+        /* 超出隱藏 */
+        overflow: hidden;
+    }
+
+    ul.img_box {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+
+    .img_box li {
+        float: left;
+        list-style: none;
+    }
+
+    /* 圖片大小 */
+    .img_box li img {
+        width: 612px;
+
+    }
+
+
+    /* 手機 */
+    @media screen and (max-width: 767px) {}
+
+    /* 桌機 */
+    @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 768px) and (hover:hover) {
+        .venus-top-nav li:hover {
+            background-color: #EBF1D6;
+            border-radius: 70px;
+            border-style: none;
+        }
+
+        .venus-top-nav li:hover a {
+            color: #F2B310;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="venus">
+
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo.png" width=105 height=48>
+                </a>
+            </div>
+
+
+            <div class="hb">
+                <label for="menu-switch">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <nav class="main-nav">
+                <a href="aboutus.html">關於我們</a>
+                <a href="news.html">最新消息</a>
+                <a href="team.html">專業團隊</a>
+                <a href="service.html">服務項目</a>
+                <a href="venus.html">場館介紹</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+            <label for="menu-switch" class="backdrop"></label>
+        </div>
+
+        <div class="header">
+            <div class="txt">
+                VENUS
+            </div>
+        </div>
+
+        <!-- 設定背景色的定位 -->
+        <div class="itemdiv">
+
+            <div class="venus-side">
+                <nav class="venus-top-nav">
+
+                    <ul>
+                        <li><a href="">台北</a></li>
+                        <li><a href="">桃園</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="item">
+                <div class="txt">
+                    <h3>基本設施說明</h3>
+                    <p>占地 500 坪，一支手機就可進場運動。所有重訓器材皆選用業界生物力學角度最佳的 Cybex 與 Life Fitness，還有超過 12 個可以執行槓鈴肌力訓練的空間。另外，更配有寬 6
+                        米、長 20
+                        米的大草皮，可以進行任何移動訓練。最頂級的動作訓練教室更是配置了 4 台 Kieser 空壓式阻力 cable，讓你挑戰各種動作的變化！</p>
+
+                    <a href="contact.html">
+                        <button>預約參觀</button>
+                    </a>
+                </div>
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2491788490893!2d121.22244241111936!3d24.95763547777358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ea50c732a5%3A0x1b5e6ee66e9fec49!2z57ev6IKyVGliYU1l6ZmE6Kit5Lit5aOi6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1690271708341!5m2!1szh-TW!2stw"
+                        width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+
+                <div class="graybg"> </div>
+
+            </div>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="imgs/venus/場館環境.jpg" alt="" width="100%">
+            </div>
+            <div class="item">
+                <img src="imgs/venus/場館環境2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="imgs/venus/場館環境3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="imgs/venus/場館環境4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="imgs/venus/環境4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="imgs/venus/環境.jpg" alt="">
+            </div>
+          
+        </div>
+
+
+        <!-- <div class="banner_container owl-carousel owl-theme">
+           
+            <ul class="img_box">
+                <li><img src="imgs/venus/場館環境.jpg" alt=""></li>
+                <li><img src="imgs/venus/場館環境2.jpg" alt=""></li>
+                <li><img src="imgs/venus/場館環境3.jpg" alt=""></li>
+                <li><img src="imgs/venus/場館環境4.jpg" alt=""></li>
+                <li><img src="imgs/venus/環境4.jpg" alt=""></li>
+                <li><img src="imgs/venus/環境.jpg" alt=""></li>
+                <li><img src="imgs/venus/環境1 index.jpg" alt=""></li>
+
+            </ul> -->
+
+        <!-- 中間圓點 -->
+        <!-- <ul class="sel_box"> -->
+        <!-- 自定義屬性 -->
+        <!-- <li data-index="0"></li>
+                <li data-index="1"></li>
+                <li data-index="2"></li> -->
+        <!-- <li data-index="3"></li>
+                <li data-index="4"></li>
+                <li data-index="5"></li> -->
+        <!-- </ul> -->
+
+
+
+    </div>
+ 
+
+    <div class="main-footer">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
+        </div>
+        <div class="tel">
+            <p>電話:03-4205643 <br>
+                時間/06:00-23:00 <br>
+                台北市信義區基隆路一段110號<br>
+                桃園市桃園區三民路三段120號
+            </p>
+        </div>
+
+        <div class="footer-icon">
+            <p>contact with us</p>
+
+            <div class="icon">
+                <img src="imgs/fb2.png" alt="fb" width=48 height=48>
+            </div>
+
+            <div class="icon">
+                <img src="imgs/ig2.png" alt="ig" width=48 height=48>
+            </div>
+            <div class="icon">
+                <img src="imgs/line 2.png" alt="line" width=48 height=48>
+            </div>
+
+            <div class="main-footer-contact">
+                <h3>立即訂閱我們</h3>
+                <div class="subscribe-container">
+                    <input type="email" id="emailInput" placeholder="輸入你的電子郵件地址">
+                    <button onclick="subscribe()">訂閱</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="gotop">
+        <img src="imgs/page up.png" alt="壺鈴Top">
+    </div>
+    <script>
+        window.addEventListener('scroll', function () {
+                if (window.scrollY > 20) {
+                    document.getElementById('gotop').style.display = 'block';
+                } else {
+                    document.getElementById('gotop').style.display = 'none';
+                }
+            }
+
+        );
+
+
+        document.getElementById('gotop').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+
+        $('.owl-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    // nav: true,
+                    autoplay:true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 5
+                        }
+                    }
+                })
+    </script>
+</body>
+
+</html>
