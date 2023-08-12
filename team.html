@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="grid.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,18 +27,27 @@
             position: relative;
             overflow: hidden;
             margin: auto;
+
+            width: 100%;
+            border:black 2px solid;
         }
 
         .card {
             display: flex;
             justify-content: center;
-
         }
+    
+      
 
         .items {
             width: 300px;
-            margin-top: 50px;
+            /* margin-top: 50px; */
+            border: 5px solid #F2B310;
+            border-radius: 0 10px 0px 10px;
+            margin: 5px;
+            
         }
+
 
         .card .items .txt,
         .card2 .items .txt,
@@ -59,6 +69,11 @@
 
         .pic {
             text-align: center;
+            transform: scale(1,1) ;
+        }
+
+        .pic img:hover{
+            transform: scale(1.1,1.1) ;
         }
 
         .team-icon {
@@ -70,9 +85,8 @@
             width: 20px;
             margin: 20px;
             vertical-align: top;
+            
         }
-
-
 
         .card2,
         .card3 {
@@ -98,6 +112,8 @@
         .card3 .pic img {
             vertical-align: top;
         }
+
+        
 
         .marquee-container {
             position: absolute;
@@ -129,16 +145,31 @@
                 transform: translatey(100%);
             }
         }
+
+    
     </style>
 </head>
 
 <body>
     <div class="wrap">
+        <input type="checkbox" name="" id="menu-switch">
         <div class="main-header">
             <div class="logo">
-                <a href="index.html"><img src="imgs/logo.png" width=105 height=48></a>
+                <a href="index.html">
+                    <img src="imgs/logo.png" width=105 height=48>
+                </a>
             </div>
-            <nav>
+
+
+            <div class="hb">
+                <label for="menu-switch"> 
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                 </label>
+            </div>
+
+            <nav class="main-nav">
                 <a href="aboutus.html">關於我們</a>
                 <a href="news.html">最新消息</a>
                 <a href="team.html">專業團隊</a>
@@ -146,11 +177,12 @@
                 <a href="venus.html">場館介紹</a>
                 <a href="contact.html">聯絡我們</a>
             </nav>
+            <label for="menu-switch" class="backdrop"></label>
         </div>
 
         <div class="header">
             <div class="txt">
-                Team
+                TEAM
             </div>
         </div>
 
@@ -161,7 +193,7 @@
                 </div>
             </div>
 
-
+        
             <div class="card">
                 <div class="items">
                     <div class="pic">
@@ -177,9 +209,10 @@
                     <div class="team-icon">
                         <a href=""><img src="imgs/person team.png" alt="小人 icon"></a>
                         <a href=""><img src="imgs/ig team.png" alt="ig icon"></a>
-                    </div>
+                  
                 </div>
             </div>
+        </div>
 
 
             <div class="card card2">
@@ -228,10 +261,10 @@
                         <a href=""><img src="imgs/ig team.png" alt="ig icon"></a>
                     </div>
                 </div>
-
             </div>
+      
 
-
+       
             <div class="card card3">
                 <div class="items">
                     <div class="pic">
@@ -274,10 +307,8 @@
                         <a href=""><img src="imgs/ig team.png" alt="ig icon"></a>
                     </div>
                 </div>
-
             </div>
-
-    </div>
+        </div>
 
     <div class="main-footer">
         <div class="logo">
@@ -316,7 +347,7 @@
         </div>
 
         <div id="gotop">
-            <img src="imgs/壺鈴.png" alt="壺鈴Top">
+            <img src="imgs/page up.png" alt="壺鈴Top">
         </div>
 
 
