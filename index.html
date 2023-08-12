@@ -226,7 +226,7 @@
             right: 280px; */
             top: 40%;
             right: 24%;
-            color: white;
+            color: black;
             text-decoration: none;
 
 
@@ -249,10 +249,12 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
+            
         }
 
         .video-player {
-            padding: 0 20px;
+            margin: 0 10px;
+            width: 60%;
 
         }
 
@@ -270,7 +272,7 @@
 
 <body>
     <div class="wrap">
-        <div class="main-header">
+        <!-- <div class="main-header">
             <div class="logo">
                 <a href="index.html"><img src="imgs/logo.png" width=105 height=48></a>
             </div>
@@ -282,10 +284,38 @@
                 <a href="venus.html">場館介紹</a>
                 <a href="contact.html">聯絡我們</a>
             </nav>
+        </div> -->
+
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo.png" width=105 height=48>
+                </a>
+            </div>
+
+            <div class="hb">
+                <label for="menu-switch">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <nav class="main-nav">
+                <a href="aboutus.html">關於我們</a>
+                <a href="news.html">最新消息</a>
+                <a href="team.html">專業團隊</a>
+                <a href="service.html">服務項目</a>
+                <a href="venus copy.html">場館介紹</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+            <label for="menu-switch" class="backdrop"></label>
         </div>
 
+
         <div class="banner">
-            <img src="imgs/banner1.png" alt="首頁輪播圖">
+            <img src="imgs/banner1.jpg" alt="首頁輪播圖">
         </div>
 
 
@@ -438,7 +468,7 @@
             </div>
 
             <div id="gotop">
-                <img src="imgs/壺鈴.png" alt="壺鈴Top">
+                <img src="imgs/page up.png" alt="壺鈴Top">
             </div>
         </div>
     </div>
