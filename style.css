@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,28 +7,54 @@
 }
 
 body {
-    font-family: 'Antonio', sans-serif;
+    font-family: 'Bebas Neue','Antonio', sans-serif;
     width: 100%;
-    min-width: 1200px;
     margin: auto;
 }
 
 .main-header {
-    width: 100%;
+    /* width: 100%;
     display: flex;
     padding: 10px;
+    background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
     background-color: black;
-
+    position: relative;
 }
 
-.main-header nav a:hover {
+/* .main-header nav a:hover {
     color: #F2B310;
+} */
+
+
+/* 漢堡選單 */
+.hb label {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    /* 讓叉叉那兩條定位在和漢堡正中間 */
 }
 
+.hb span {
+    width: 80%;
+    height: 4px;
+    background-color: #F2B310;
+}
 
+.logo img {
+    /* vertical-align: middle; */
+    vertical-align: top;
+}
 
 .header {
-    min-width: 768px;
+    /* min-width: 768px; */
     font-size: 36px;
     text-align: center;
     line-height: 150px;
@@ -35,31 +63,166 @@ body {
 }
 
 
-.logo img {
-    vertical-align: middle;
-}
 
-nav {
+.main-nav {
     display: flex;
-    margin: auto;
+    /* margin: auto; */
 
 }
 
-nav a {
-    line-height: 40px;
+.main-nav a {
+    /* line-height: 40px;
     color: white;
     text-decoration: none;
     padding: 0 10px;
-    margin: 5px 20px;
+    margin: 5px 20px; */
+    line-height: 40px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+
+
+}
+
+/* 最上面的input在 桌機手機都會隱藏寫在共用區 */
+#menu-switch {
+    display: none;
+}
+
+/* 手機 */
+@media screen and (max-width: 991px) {
+    .main-footer{
+        display: block !important;
+    }
+    .main-nav {
+        /* position: absolute;
+        width: 90%;
+        margin: 0 5%;
+        background-color: #fa0;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        display:none; */
+
+        position: absolute;
+        z-index: 4;
+        width: 50%;
+        height: calc(100vh - 60px);
+        background-color: #fa0;
+        top: 100%;
+        left: 0%;
+        translate: -100% 0%;
+        flex-direction: column;
+        transition: 1s;
+        opacity: 0;
+        
+    }
+
+    .main-nav a+a {
+        border-top: 1px solid #fff;
+    }
+
+
+  
+    #menu-switch:checked+.main-header .main-nav {
+        display: flex;
+       
+    }
+
+    #menu-switch:checked+.main-header .main-nav {
+        translate: 0% 0%;
+        /* 當摸到時選單回來 translate: x設定 0  */
+        opacity: 1;
+        /* 透明度沒摸到 到摸到透明度變成1 顯示 */
+    }
+
+
+    /* 設定漢堡三條span被按到後變叉叉外觀 */
+    #menu-switch:checked+.main-header .hb span:nth-child(1) {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        transform: rotate(45deg);
+    }
+
+    /* 中間那條span要隱藏 */
+    #menu-switch:checked+.main-header .hb span:nth-child(2) {
+        display: none;
+    }
+
+    /* 第三條span外觀 */
+    #menu-switch:checked+.main-header .hb span:nth-child(3) {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        transform: rotate(-45deg);
+    }
+
+
+    .backdrop {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 0%;
+        height: 0;
+        opacity: 0;
+        background-color: #0008;
+        transition: opacity 1s,
+            width 0s 1s,
+            height 0s 1s;
+        /* 淡出動畫效果 */
+        z-index: 3;
+    }
+
+    #menu-switch:checked+.main-header .backdrop {
+        right: 0;
+        top: 100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        opacity: 1;
+        transition: opacity 1s;
+        /* 淡入動畫效果 */
+    }
+
+}
+
+/* 桌機 */
+@media screen and (min-width: 992px) {
+    .hb {
+        display: none;
+    }
+
+    .main-nav {
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .main-nav a {
+        line-height: 40px;
+        padding: 0 10px;
+        margin: 5px 20px;
+
+    }
+
+
+}
+
+@media screen and (min-width: 992px) and (hover:hover) {
+
+    .main-header nav a:hover {
+        color: #F2B310;
+    }
+
+
 
 }
 
 .main-footer {
-    width:100%;
+    width: 100%;
     background-color: black;
     display: flex;
     justify-content: space-around;
- 
+
 }
 
 .main-footer .logo {
@@ -99,16 +262,26 @@ footer-icon p {
 
 .main-footer-contact {
     text-align: center;
-    margin: 10px 0px;
 }
 
 /* 立即訂閱我們 */
 .subscribe-container {
     display: flex;
     align-items: center;
+    width: fit-content;
+    margin: auto;
 }
 
-.main-footer-contact h3{
+.footer-icon{
+    padding-top: 30px;
+}
+
+.footer-icon .main-footer-contact{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.main-footer-contact h3 {
     text-align: center;
     margin: 10px 0;
 
@@ -142,16 +315,3 @@ footer-icon p {
     width: 40px;
     height: 50px;
 }
-
-
-
-
-
-
-/* h1,h2,h2{
-    color:#333;
-} */
-
-/* p{
-    color:#666;
-} */
