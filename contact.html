@@ -41,17 +41,17 @@
         z-index: 2;
     }
 
-    form a{
-        width:150px;
+    form a {
+        width: 150px;
         text-decoration: none;
         font-size: 16px;
-        color:black;
+        color: black;
         padding: 10px 50px;
         /* border:5px #999 solid; */
         border-style: none;
         text-align: center;
     }
-    
+
     /* 表單按鈕樣式 */
     form .submit-btn {
         width: 150px;
@@ -61,15 +61,15 @@
         border-radius: 20px;
     }
 
-    form a:hover{
+    form a:hover {
         background-color: white;
-        color:#F2B310;
+        color: #F2B310;
     }
 
     form label {
         display: flex;
         align-items: center;
-        
+
     }
 
     form .txt {
@@ -79,16 +79,16 @@
 
     .formdiv input,
     .formdiv select {
-        border-style:none ;
+        border-style: none;
         flex: 1;
         height: 30px;
         background-color: #F2B310;
-     
-        border-bottom: 2px   white dashed;
-       
-      
 
-   }
+        border-bottom: 2px white dashed;
+
+
+
+    }
 
     .pic {
 
@@ -110,7 +110,7 @@
     }
 
     .footer-icon-div {
-        width: 220px; 
+        width: 220px;
         /* border:3px solid red; */
         margin: auto;
     }
@@ -156,37 +156,82 @@
 
     }
 
-    
+    @media (max-width: 414px) {
+        .header {
+            font-size: 24px;
+            line-height: 120px;
+        }
+
+        form {
+            width: 80%;
+            padding: 30px;
+        }
+
+        form .txt {
+            width: 100px;
+        }
+
+        form label {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .formdiv input,
+        .formdiv select {
+            width: 100%;
+
+            form .submit-btn {
+                width: 100%;
+            }
+
+            .pic iframe {
+                width: 100%;
+                height: 200px;
+                margin: 10px 0;
+            }
+
+            .footer-icon-div {
+                width: 100%;
+            }
+
+            iframe {
+            width: 100%;
+            margin-top: 20px;
+            height: 300px;
+
+        }
+        }
+    }
 </style>
 
 <body>
     <input type="checkbox" name="" id="menu-switch">
-        <div class="main-header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="imgs/logo.png" width=105 height=48>
-                </a>
-            </div>
-
-
-            <div class="hb">
-                <label for="menu-switch"> 
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                 </label>
-            </div>
-
-            <nav class="main-nav">
-                <a href="aboutus.html">關於我們</a>
-                <a href="news.html">最新消息</a>
-                <a href="team.html">專業團隊</a>
-                <a href="service.html">服務項目</a>
-                <a href="venus.html">場館介紹</a>
-                <a href="contact.html">聯絡我們</a>
-            </nav>
-            <label for="menu-switch" class="backdrop"></label>
+    <div class="main-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="imgs/logo.png" width=105 height=48>
+            </a>
         </div>
+
+
+        <div class="hb">
+            <label for="menu-switch">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <nav class="main-nav">
+            <a href="aboutus.html">關於我們</a>
+            <a href="news.html">最新消息</a>
+            <a href="team.html">專業團隊</a>
+            <a href="service.html">服務項目</a>
+            <a href="venus.html">場館介紹</a>
+            <a href="contact.html">聯絡我們</a>
+        </nav>
+        <label for="menu-switch" class="backdrop"></label>
+    </div>
 
 
     <div class="header">
@@ -268,8 +313,11 @@
 
 
     <div class="pic">
-       
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2491788490893!2d121.22244241111936!3d24.95763547777358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ea50c732a5%3A0x1b5e6ee66e9fec49!2z57ev6IKyVGliYU1l6ZmE6Kit5Lit5aOi6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1690271708341!5m2!1szh-TW!2stw" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2491788490893!2d121.22244241111936!3d24.95763547777358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ea50c732a5%3A0x1b5e6ee66e9fec49!2z57ev6IKyVGliYU1l6ZmE6Kit5Lit5aOi6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1690271708341!5m2!1szh-TW!2stw"
+            width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
         <div class="graybg h100"></div>
@@ -299,7 +347,7 @@
 
     <div class="main-footer">
         <div class="logo">
-          <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
+            <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
         </div>
         <div class="tel">
             <p>電話:03-4205643 <br>
