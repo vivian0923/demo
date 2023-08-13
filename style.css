@@ -184,6 +184,11 @@ body {
         /* 淡入動畫效果 */
     }
 
+    #gotop {
+        display: none !important;
+    }
+  
+
 }
 
 /* 桌機 */

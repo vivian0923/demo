@@ -188,7 +188,6 @@
     @media screen and (max-width: 768px) {
         .item {
             flex-direction: column;
-
         }
 
         .item h3 {
@@ -207,10 +206,6 @@
             padding-bottom: 10px;
         }
 
-        #gotop {
-            display: none;
-        }
-
         .banner_container {
             flex-direction: column;
         }
@@ -225,17 +220,18 @@
         } */
 
         .item .map iframe {
-            width: 100%;
-            margin-top: 20px;
-            height: 300px;
+            display: none;
 
+        }
+
+        .img_box {
+            height: 397px;
         }
 
         .venus {
             min-width: 100%;
         }
     }
-
 </style>
 
 <body>
@@ -322,13 +318,13 @@
             <ul class="img_box">
                 <li><img src="imgs/venus/場館環境.jpg" alt=""></li>
                 <li><img src="imgs/venus/場館環境2.jpg" alt=""></li>
-                <li><img src="imgs/venus/場館環境3.jpg" alt=""></li>
+               
                 <li><img src="imgs/venus/場館環境4.jpg" alt=""></li>
                 <li><img src="imgs/venus/環境4.jpg" alt=""></li>
                 <li><img src="imgs/venus/環境.jpg" alt=""></li>
-                <li><img src="imgs/venus/環境1 index.jpg" alt=""></li>
-                <li><img src="imgs/venus/場館環境.jpg" alt=""></li>
-                <li><img src="imgs/venus/場館環境2.jpg" alt=""></li>
+                <!-- <li><img src="imgs/環境2 index.jpg " alt=""></li> -->
+                <li><img src="imgs/venus/場館環境3.jpg" alt=""></li>
+                
 
             </ul>
 
@@ -444,7 +440,7 @@
                 if (index >= 3) {
                     // 此處是為了防止頻繁點選按鈕，index++，導致index超過4，變成5、6、7...
                     // 當index>=4，我們強行讓其等於6,類似防抖
-                    index = 3;
+                    index = 2;
                     img_box.style.transition = 'all, linear, 1s';
                     img_box.style.left = -index * imgContainerW + 'px';
                     for (let i = 0; i < lis.length; i++) {

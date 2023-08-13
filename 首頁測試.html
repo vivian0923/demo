@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <title>首頁</title>
+    <style>
+        body {
+            width: 100%;
+            margin: auto;
+
+        }
+
+        .wrap {
+            width: 100%;
+            margin: auto;
+        }
+
+        .banner img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        /*    關於我們 */
+        .index-aboutus {
+            display: flex;
+            /* 共用區加這行手機版的文字就會消失 */
+            
+        }
+
+        .index-aboutus .txt {
+            padding: 40px 50px;
+
+            line-height: 200%;
+        }
+
+        .index-aboutus .txt h2 {
+            font-size: 32px;
+        }
+
+        .index-aboutus .txt p {
+            font-size: 16px;
+            padding: 30px 30px 30px 0;
+        }
+
+        .index-aboutus .txt a {
+            text-decoration: none;
+        }
+
+        .index-aboutus .txt .btn {
+            background-color: #F2B310;
+            display: inline-block;
+            border-radius: 70px;
+            border: none;
+            padding: 10px 40px;
+            color: black;
+            margin-top: 30px;
+        }
+
+        /* 課程特色 */
+        .index-course {
+            padding: 40px 0;
+            background-color: #F2B310;
+            text-align: center;
+        }
+
+        .index-course h2 {
+            margin-top: 40px;
+            font-size: 32px;
+        }
+        .course {
+           display: flex;
+           
+
+        }
+        .course img {
+                width: 100px;
+                justify-content: center;
+
+            }
+
+            .course .feature {
+                margin: 30px;
+                width: 320px;
+                padding: 30px;
+
+            }
+
+            .course .feature p {
+                margin: 10px;
+                line-height: 200%;
+
+            }
+
+
+
+
+        /* 手機 */
+        @media screen and (max-width:414px) {
+            .index-aboutus {
+                flex-direction: column;
+            }
+
+            .index-aboutus .pic {
+                padding: 20px;
+                width:100%;
+            }
+            .index-aboutus .pic img{
+                width:80%;
+            }
+
+            .index-aboutus .txt {
+                width: 100%;
+            }
+
+           /* 課程特色: */
+            .course {
+               
+                flex-direction:column ;
+                /* 沒有變直向? */
+                width:100%;
+            }
+        }
+
+        /* 桌機 */
+        @media screen and (min-width:768px) {
+
+            /*    關於我們 */
+            .index-aboutus {
+              
+                flex-direction: row;
+                justify-content: center;
+                /* 沒有置中? */
+            }
+
+    
+            .index-aboutus .pic img {
+                width: 100%;
+                vertical-align: top;
+            }
+
+
+            /* 課程特色 */
+             .course {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                 /* 沒有變橫向? */
+                justify-content: center;
+                 /* 沒有置中? */
+               
+
+            }
+
+         
+
+
+            /* 心得分享 */
+            .idea {
+                text-align: center;
+            }
+
+            .card {
+                width: 700px;
+                margin: 30px auto;
+                display: flex;
+                align-items: center;
+
+            }
+
+            .idea h2 {
+                margin: 40px;
+                font-size: 32px;
+            }
+
+            .card .pic img {
+                width: 50%;
+                vertical-align: middle;
+            }
+
+            .card .txt {
+                width: 50%;
+                box-sizing: border-box;
+                font-size: 16px;
+                margin-left: 20px;
+                text-align: left;
+                line-height: 180%;
+            }
+
+            .card .txt img {
+                margin: 20px;
+            }
+
+            .card .right-arrow,
+            .card .left-arrow {
+                margin: 0 30px;
+                width: 20px;
+            }
+
+            /* 首頁場館環境 */
+            .venus {
+                background-color: #F2B310;
+                text-align: center;
+                padding: 30px 0;
+            }
+
+            .venus h2 {
+                margin: 10px;
+                font-size: 32px;
+            }
+
+            .venus .card {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+            }
+
+            .venus .card img {
+                width: 500px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+
+            }
+
+            .venus .card .items {
+                line-height: 2;
+                margin: 30px;
+            }
+
+            .venus .card .items h3 {
+                font-size: 30px;
+            }
+
+
+            /* 立即體驗大圖 */
+            .bigpic {
+                position: relative;
+
+            }
+
+            .bigpic p {
+                font-size: 36px;
+                font-weight: 600;
+                text-align: center;
+                position: absolute;
+                top: 20%;
+                right: 20%;
+                /* top: 80px;
+            right: 200px; */
+
+            }
+
+
+            .bigpic img {
+                width: 100%;
+                height: 600px;
+                vertical-align: top;
+                object-fit: cover;
+
+
+            }
+
+            .bigpic .btn {
+                padding: 10px 80px;
+                background-color: #F2B310;
+                border: none;
+                position: absolute;
+                /* bottom: 350px;
+            right: 280px; */
+                top: 40%;
+                right: 24%;
+                color: black;
+                text-decoration: none;
+
+
+            }
+
+
+            /* 影片區 */
+            .video-txt {
+                text-align: center;
+                line-height: 50px;
+
+            }
+
+            /* 隱藏影片播放列表 */
+            .video-container {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+
+            }
+
+            .video-player {
+                margin: 0 10px;
+                width: 60%;
+
+            }
+
+            .video-player::-webkit-media-controls-enclosure {
+                display: none;
+            }
+
+            /* 隱藏所有控件 */
+            .video-player:hover::-webkit-media-controls-enclosure {
+                position: absolute;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <input type="checkbox" name="" id="menu-switch">
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo.png" width=105 height=48>
+                </a>
+            </div>
+
+            <div class="hb">
+                <label for="menu-switch">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <nav class="main-nav">
+                <a href="aboutus.html">關於我們</a>
+                <a href="news.html">最新消息</a>
+                <a href="team.html">專業團隊</a>
+                <a href="service.html">服務項目</a>
+                <a href="venus.html">場館介紹</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+            <label for="menu-switch" class="backdrop"></label>
+        </div>
+
+
+        <div class="banner">
+            <img src="imgs/banner1.jpg" alt="首頁輪播圖">
+        </div>
+
+
+
+        <div class="index-aboutus">
+            <div class="pic">
+                <img src="imgs/關於我們(首頁).jpg" alt="首頁關於我們圖">
+            </div>
+            <div class="txt ">
+                <h2>關於我們</h2>
+                <p>除了提供專業的客製化一對一教學，
+                    也提供上課的學員自主練習，
+                    場館全面採用海外原裝進口的商用頂級有氧器材、重訓器材，
+                    提供優質安全的訓練環境，帶給大家最好的運動體驗。
+
+                </p>
+                <a href="aboutus.html" class="btn">了解更多</a>
+
+            </div>
+        </div>
+
+        <div class="index-course">
+            <h2>課程特色</h2>
+            <div class="course">
+                <div class="feature">
+                    <img src="imgs/heart-beat.png" alt="課程特色icon">
+                    <p>會用視覺、聽覺與動能三種學習方式，並輔以正面回饋，讓你在課程中維持愉快的心情，達成最佳學習效能。</p>
+                </div>
+                <div class="feature">
+                    <img src="imgs/2871284.png" alt="課程特色icon">
+                    <p>研發的課程内容，以科學基礎為主、減少運動傷害風險為輔，實際協助你在運動過程中所面臨的各種狀況，有效達成目標。</p>
+                </div>
+                <div class="feature">
+                    <img src="imgs/Frame 3.png" alt="課程特色icon">
+                    <p>強調符合生物力學、變化性高的訓練內容，屏除單調制式的重複訓練，提高你身體強韌的功能性。</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="idea">
+            <h2>學員心得分享</h2>
+            <div class="card">
+
+
+                <img src="imgs/left-arrow 4.png" alt="右箭頭" width="20px" class="left-arrow">
+                <img src="imgs/before.jpg" alt="學員before after">
+
+
+                <div class="txt">
+                    <h3>不喜歡運動的我 漸漸開始運動</h3>
+                    <p>我本身就是四隻細細瘦瘦的身材體重 48 公斤，以體脂肪 26~27
+                        左右身材來說，覺得還蠻標準的，但肥肥鬆鬆的肚子有時後讓我很討厭，但也沒有什麼想要改變的動力，反正看起來瘦瘦的就好，突然有一天看到...</p>
+                </div>
+                <img src="imgs/right-arrow.png" alt="右箭頭" width="20px" class="right-arrow">
+            </div>
+
+            <img src="imgs/list.png" alt="輪播圖 3個點" width="30px">
+
+        </div>
+
+        <div class="venus">
+            <h2>our store<br>
+                - 場館資訊 -
+            </h2>
+            <div class="card">
+                <div class="items">
+                    <a href="#"><img src="imgs/環境1 index.jpg" alt="首頁環境圖"></a>
+                    <h3>台北</h3>
+                    <p>台北市信義區基隆路一段110號<br>
+                        電話 / 02-22135000<br>
+                        時間 / 06:00-23:00</p>
+                </div>
+
+                <div class="items">
+                    <a href="#"><img src="imgs/環境2 index.jpg" alt="首頁環境圖"></a>
+                    <h3>桃園</h3>
+                    <p>桃園市桃園區三民路三段120號<br>
+                        電話 /03-4258711<br>
+                        時間 / 06:00-23:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bigpic">
+            <img src="imgs/立即體驗.jpg" alt="立即體驗大圖">
+            <p>追求理想最舒適的健身房<br>
+                可持續性的健身體驗</p>
+            <a href="contact.html" class="btn">立即體驗</a>
+        </div>
+
+        <div class="video-bg">
+            <div class="video-txt">
+                <h1>素人體態大改造</h1>
+            </div>
+
+
+            <div class="video-container">
+
+
+
+                <video class="video-player" width="600" height="360" controls>
+                    <source src="video/video 1.mp4" type="video/mp4">
+                </video>
+
+
+                <video class="video-player" width="600" height="360" controls>
+                    <source src="video/video 3.mp4" type="video/mp4">
+                </video>
+
+            </div>
+        </div>
+
+
+
+        <div class="main-footer">
+            <div class="logo">
+                <img src="imgs/logo.png" alt="logo圖" width=105 height=48>
+            </div>
+            <div class="tel">
+                <p>電話:03-4205643 <br>
+                    時間/06:00-23:00 <br>
+                    台北市信義區基隆路一段110號<br>
+                    桃園市桃園區三民路三段120號
+                </p>
+            </div>
+
+            <div class="footer-icon">
+                <p>contact with us</p>
+
+                <div class="icon">
+                    <img src="imgs/fb2.png" alt="fb" width=48 height=48>
+                </div>
+
+                <div class="icon">
+                    <img src="imgs/ig2.png" alt="ig" width=48 height=48>
+                </div>
+                <div class="icon">
+                    <img src="imgs/line 2.png" alt="line" width=48 height=48>
+                </div>
+
+                <div class="main-footer-contact">
+                    <h3>立即訂閱我們</h3>
+                    <div class="subscribe-container">
+                        <input type="email" id="emailInput" placeholder="輸入你的電子郵件地址">
+                        <button onclick="subscribe()">訂閱</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="gotop">
+                <img src="imgs/page up.png" alt="壺鈴Top">
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    document.getElementById('gotop').style.display = 'block';
+                } else {
+                    document.getElementById('gotop').style.display = 'none';
+                }
+            }
+
+        );
+
+
+        document.getElementById('gotop').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+
+</html>
