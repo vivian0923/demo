@@ -9,9 +9,9 @@
     <title>聯絡我們</title>
 </head>
 <style>
-    /* body {
+    body {
         margin: auto;
-    } */
+    }
 
 
     .header {
@@ -156,7 +156,7 @@
 
     }
 
-    @media (max-width: 414px) {
+    @media (max-width: 768px) {
         .header {
             font-size: 24px;
             line-height: 120px;
@@ -180,27 +180,32 @@
 
         select option {
             color: black;
+            text-decoration: none;
         }
 
         .formdiv input,
         .formdiv select {
             width: 100%;
         }
-            form .submit-btn {
-                width: 100%;
-            }
 
-            .pic iframe {
-                width: 80%;
-                margin-top: 20px;
-                height: 300px;
-            }
-
-            .footer-icon-div {
-                width: 100%;
-            }
+        form .submit-btn {
+            width: 100%;
         }
-    
+
+        .pic iframe {
+            width: 80%;
+            margin-top: 20px;
+            height: 300px;
+        }
+
+        .footer-icon-div {
+            width: 100%;
+        }
+
+        #gotop {
+            display: none;
+        }
+    }
 </style>
 
 <body>
@@ -379,9 +384,11 @@
             </div>
 
         </div>
+
         <div id="gotop">
             <img src="imgs/page up.png" alt="壺鈴Top">
         </div>
+
         <script>
             window.addEventListener('scroll', function () {
                     if (window.scrollY > 100) {
