@@ -16,7 +16,7 @@
 
     .venus-side {
         padding-top: 20px;
-        /* border: 2px solid blue; */
+
     }
 
     .venus-top-nav {
@@ -30,7 +30,7 @@
     }
 
     .venus-top-nav ul {
-       
+
         display: flex;
         margin: 10px;
         padding: 5px;
@@ -64,9 +64,10 @@
     }
 
     .venus {
-        /* min-width: 768px; */
+        min-width: 768px;
         margin: auto;
         text-align: center;
+
     }
 
     .venus .btn,
@@ -88,9 +89,6 @@
         justify-content: center;
         /* margin: 40px 20px; */
         padding: 60px 0;
-
-
-
     }
 
     .item .txt {
@@ -140,8 +138,6 @@
     /* 圖片大小 */
     .img_box li img {
         width: 612px;
-
-
     }
 
     /* 小圓點 */
@@ -176,6 +172,9 @@
         position: relative;
     }
 
+
+
+
     .graybg {
         position: absolute;
         top: 0%;
@@ -190,10 +189,56 @@
 
     /* 手機 */
     @media screen and (max-width: 414px) {
+        .item {
+            flex-direction: column;
 
+        }
+
+        .item h3 {
+            margin-bottom: 30px;
+        }
+
+        .item .txt {
+            width: 80%;
+            height: 450px;
+            line-height: 30px;
+            padding: 30px;
+
+        }
+
+        .item p {
+            padding-bottom: 10px;
+        }
+
+        #gotop {
+            display: none;
+        }
+
+        .banner_container {
+            flex-direction: column;
+        }
+
+        .banner_container {
+            width: 100%;
+            height: 84vw;
+        }
+
+        .main-footer {
+            flex-direction: column;
+        }
+
+        .item .map iframe {
+            width: 100%;
+            margin-top: 20px;
+            height: 300px;
+
+        }
+
+        .venus {
+            min-width: 100%;
+        }
     }
 
-  
 </style>
 
 <body>
@@ -489,6 +534,45 @@
             })
         </script>
 
+        <!-- Code injected by live-server -->
+        <script>
+            // <![CDATA[  <-- For SVG support
+            if ('WebSocket' in window) {
+                (function () {
+                    function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                            var elem = sheets[i];
+                            var parent = elem.parentElement || head;
+                            parent.removeChild(elem);
+                            var rel = elem.rel;
+                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() ==
+                                "stylesheet") {
+                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (
+                                    new Date().valueOf());
+                            }
+                            parent.appendChild(elem);
+                        }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + '/ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function (msg) {
+                        if (msg.data == 'reload') window.location.reload();
+                        else if (msg.data == 'refreshcss') refreshCSS();
+                    };
+                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                    }
+                })();
+            } else {
+                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+            // ]]>
+        </script>
 </body>
 
 </html>
